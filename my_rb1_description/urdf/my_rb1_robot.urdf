@@ -180,7 +180,7 @@
   </gazebo>
 
   <!-- Front Caster Joint -->
-  <joint name="front_caster_joint" type="fixed">
+  <joint name="front_caster_joint" type="continuous">
     <origin xyz="0.1 0.0 -0.15" rpy="0 0 0"/>
     <parent link="base_link"/>
     <child link="front_caster"/>
@@ -217,7 +217,7 @@
   </gazebo>
 
   <!-- Back Caster Joint -->
-  <joint name="back_caster_joint" type="fixed">
+  <joint name="back_caster_joint" type="continuous">
     <origin xyz="-0.1 0.0 -0.15" rpy="0 0 0"/>
     <parent link="base_link"/>
     <child link="back_caster"/>
@@ -259,7 +259,7 @@
     <parent link="base_link"/>
     <child link="front_laser"/>
   </joint>
-	
+
 	<!-- Differential Drive Controller -->
   <gazebo>
     <plugin name="differential_drive_controller" filename="libgazebo_ros_diff_drive.so">
