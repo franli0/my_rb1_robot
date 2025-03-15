@@ -21,6 +21,11 @@
     <color rgba="0.8 0.8 0.0 1.0"/>
   </material>
 
+  <!-- Gazebo Coloring for base link -->
+  <gazebo reference="base_link">
+    <material>Gazebo/Black</material>
+  </gazebo>
+
   <!-- Base Footprint -->
   <link name="base_footprint">
     <inertial>
@@ -94,6 +99,11 @@
     </collision>
   </link>
 
+  <!-- Gazebo Coloring for Right Wheel -->
+  <gazebo reference="right_wheel">
+    <material>Gazebo/Red</material>
+  </gazebo>
+
   <!-- Right Wheel Joint -->
   <joint name="right_wheel_joint" type="continuous">
     <origin xyz="0.0 -0.2 -0.15" rpy="0 0 0"/>
@@ -125,6 +135,11 @@
       </geometry>
     </collision>
   </link>
+
+  <!-- Gazebo Coloring for Left Wheel -->
+  <gazebo reference="left_wheel">
+    <material>Gazebo/Red</material>
+  </gazebo>
 
   <!-- Left Wheel Joint -->
   <joint name="left_wheel_joint" type="continuous">
@@ -159,6 +174,11 @@
     </collision>
   </link>
 
+  <!-- Gazebo Coloring for Front Caster -->
+  <gazebo reference="front_caster">
+    <material>Gazebo/Blue</material>
+  </gazebo>
+
   <!-- Front Caster Joint -->
   <joint name="front_caster_joint" type="fixed">
     <origin xyz="0.1 0.0 -0.15" rpy="0 0 0"/>
@@ -190,6 +210,11 @@
       </geometry>
     </collision>
   </link>
+
+  <!-- Gazebo Coloring for Back Caster -->
+  <gazebo reference="back_caster">
+    <material>Gazebo/Blue</material>
+  </gazebo>
 
   <!-- Back Caster Joint -->
   <joint name="back_caster_joint" type="fixed">
@@ -223,11 +248,16 @@
     </collision>
   </link>
 
+  <!-- Gazebo Coloring for Front Laser -->
+  <gazebo reference="front_laser">
+    <material>Gazebo/Yellow</material>
+  </gazebo>
+
   <!-- Front Laser Joint -->
   <joint name="front_laser_joint" type="fixed">
     <origin xyz="0.25 0.0 0.075" rpy="3.14159 0 0"/>
     <parent link="base_link"/>
     <child link="front_laser"/>
   </joint>
-  
+
 </robot>
